@@ -39,7 +39,7 @@
      ]#systemctl enable   mysqld
      
 #### Check the server started successfully.
-     ]#root@dev ~]# systemctl status  mysqld
+     ]# systemctl status  mysqld
       
       â mysqld.service - MySQL Community Server
          Loaded: loaded (/usr/lib/systemd/system/mysqld.service; enabled; vendor preset: disabled)
