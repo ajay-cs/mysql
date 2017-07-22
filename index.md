@@ -1,4 +1,4 @@
-##### Installation of Mysql server on Centos/RHEL 7 server
+## Installation of Mysql server on Centos/RHEL 7 server
 
 #### Set the hostname for your server
     hostnamectl set-hostname dev
