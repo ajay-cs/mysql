@@ -1,16 +1,16 @@
 ## Installation of Mysql server on Centos/RHEL 7 server
 
 #### Set the hostname for your server
-    hostnamectl set-hostname dev
+     ]#hostnamectl set-hostname dev
 #### Download and add the  community repository
-     wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
+     ]#wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
 #### install the rpm mysql-community-release-el7-5.noarch.rpm
-    rpm -ivh mysql-community-release-el7-5.noarch.rpm
+     ]#rpm -ivh mysql-community-release-el7-5.noarch.rpm
     
 #### cross check Mysql repo is added as show below:
-    [root@dev ~]# yum repolist
+     ]# yum repolist
     Loaded plugins: fastestmirror, langpacks
-    Loading mirror speeds from cached hostfile
+    Loading mirror speeds from cached h}ostfile
      * base: ftp.iitm.ac.in
      * epel: mirror.rise.ph
      * extras: ftp.iitm.ac.in
@@ -25,18 +25,18 @@
     updates/7/x86_64                                         CentOS-7 - Updates                                                      2,130
     repolist: 24,288
 #### run yum update to update the all repo
-      yum update
+     ]#yum update
       
 #### Install the mysql server
-    yum install mysql-server
+     ]#yum install mysql-server
     
  #### start the msql server
-      systemctl start mysqld
+     ]#systemctl start mysqld
       
  #### Allow to start the mysql server at boot time
-      systemctl enable   mysqld
+     ]#systemctl enable   mysqld
  #### Check the server started successfully.
-      [root@dev ~]# systemctl status  mysqld
+     ]#root@dev ~]# systemctl status  mysqld
       
       â mysqld.service - MySQL Community Server
          Loaded: loaded (/usr/lib/systemd/system/mysqld.service; enabled; vendor preset: disabled)
