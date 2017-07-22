@@ -62,7 +62,7 @@
       Jul 22 12:05:47 dev systemd[1]: Started MySQL Community Server.
       Hint: Some lines were ellipsized, use -l to show in full.
       
-## Harden MySQL Server
+## Hardening the MySQL Server
      ]# mysql_secure_installation
 
 
