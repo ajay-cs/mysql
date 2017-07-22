@@ -32,9 +32,9 @@
 #### Install the mysql server
      ]#yum install mysql-server
      
-#### start the msql server
+#### Start the msql server
      ]#systemctl start mysqld
-     
+
 #### Allow to start the mysql server at boot time
      ]#systemctl enable   mysqld
      
@@ -60,6 +60,3 @@
       Jul 22 12:05:46 dev mysqld_safe[27634]: 170722 12:05:46 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
       Jul 22 12:05:47 dev systemd[1]: Started MySQL Community Server.
       Hint: Some lines were ellipsized, use -l to show in full.
-
-      
-      
