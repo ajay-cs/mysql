@@ -1,15 +1,15 @@
 ## Installation of Mysql server on Centos/RHEL 7 server
 
-#### Set the hostname for your server
+#### 1) Set the hostname for your server
      ]#hostnamectl set-hostname dev
      
-#### Download and add the  community repository
+#### 2) Download and add the  community repository
      ]#wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
      
-#### install the rpm mysql-community-release-el7-5.noarch.rpm
+#### 3) Install the rpm mysql-community-release-el7-5.noarch.rpm
      ]#rpm -ivh mysql-community-release-el7-5.noarch.rpm
     
-#### cross check Mysql repo is added as show below:
+#### 4) Cross check Mysql repo is added as show below:
      ]# yum repolist
     Loaded plugins: fastestmirror, langpacks
     Loading mirror speeds from cached h}ostfile
@@ -26,19 +26,20 @@
     mysql56-community/x86_64                                 MySQL 5.6 Community Server                                                344
     updates/7/x86_64                                         CentOS-7 - Updates                                                      2,130
     repolist: 24,288
-#### run yum update to update the all repo
+    
+#### 5) Yun yum update to update the all repo
      ]#yum update
       
-#### Install the mysql server
+#### 6) Install the mysql server
      ]#yum install mysql-server
      
-#### Start the msql server
+#### 7) Start the msql server
      ]#systemctl start mysqld
-
-#### Allow to start the mysql server at boot time
+ 
+#### 8) Allow to start the mysql server at boot time
      ]#systemctl enable   mysqld
      
-#### Check the server started successfully.
+#### 9) Check the server started successfully.
      ]# systemctl status  mysqld
       
       â mysqld.service - MySQL Community Server
@@ -60,3 +61,5 @@
       Jul 22 12:05:46 dev mysqld_safe[27634]: 170722 12:05:46 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
       Jul 22 12:05:47 dev systemd[1]: Started MySQL Community Server.
       Hint: Some lines were ellipsized, use -l to show in full.
+      
+-----------------End----------------------------
