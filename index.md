@@ -1,13 +1,13 @@
 ## Installation of Mysql server on Centos/RHEL 7 server
 
 #### 1) Set the hostname for your server
-     ]#hostnamectl set-hostname dev
+     ]# hostnamectl set-hostname dev
      
 #### 2) Download and add the  community repository
-     ]#wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
+     ]# wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
      
 #### 3) Install the rpm mysql-community-release-el7-5.noarch.rpm
-     ]#rpm -ivh mysql-community-release-el7-5.noarch.rpm
+     ]# rpm -ivh mysql-community-release-el7-5.noarch.rpm
     
 #### 4) Cross check Mysql repo is added as show below:
      ]# yum repolist
@@ -28,16 +28,16 @@
     repolist: 24,288
     
 #### 5) Yun yum update to update the all repo
-     ]#yum update
+     ]# yum update
       
 #### 6) Install the mysql server
-     ]#yum install mysql-server
+     ]# yum install mysql-server
      
 #### 7) Start the msql server
-     ]#systemctl start mysqld
+     ]# systemctl start mysqld
  
 #### 8) Allow to start the mysql server at boot time
-     ]#systemctl enable mysqld
+     ]# systemctl enable mysqld
      
 #### 9) Check the server started successfully.
      ]# systemctl status mysqld
