@@ -37,10 +37,10 @@
      ]#systemctl start mysqld
  
 #### 8) Allow to start the mysql server at boot time
-     ]#systemctl enable   mysqld
+     ]#systemctl enable mysqld
      
 #### 9) Check the server started successfully.
-     ]# systemctl status  mysqld
+     ]# systemctl status mysqld
       
       â mysqld.service - MySQL Community Server
          Loaded: loaded (/usr/lib/systemd/system/mysqld.service; enabled; vendor preset: disabled)
