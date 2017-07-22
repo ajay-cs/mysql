@@ -2,8 +2,10 @@
 
 #### Set the hostname for your server
      ]#hostnamectl set-hostname dev
+     
 #### Download and add the  community repository
      ]#wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
+     
 #### install the rpm mysql-community-release-el7-5.noarch.rpm
      ]#rpm -ivh mysql-community-release-el7-5.noarch.rpm
     
