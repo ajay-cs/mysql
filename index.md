@@ -32,13 +32,13 @@
 #### Install the mysql server
      ]#yum install mysql-server
      
- #### start the msql server
+#### start the msql server
      ]#systemctl start mysqld
      
- #### Allow to start the mysql server at boot time
+#### Allow to start the mysql server at boot time
      ]#systemctl enable   mysqld
      
- #### Check the server started successfully.
+#### Check the server started successfully.
      ]#root@dev ~]# systemctl status  mysqld
       
       â mysqld.service - MySQL Community Server
