@@ -1,37 +1,62 @@
-## Welcome to GitHub Pages
+##### Installation of Mysql server on Centos/RHEL 7 server
 
-You can use the [editor on GitHub](https://github.com/ajay-cs/mysql/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+#### Set the hostname for your server
+    hostnamectl set-hostname dev
+#### Download and add the  community repository
+     wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
+#### install the rpm mysql-community-release-el7-5.noarch.rpm
+    rpm -ivh mysql-community-release-el7-5.noarch.rpm
+    
+#### cross check Mysql repo is added as show below:
+    [root@dev ~]# yum repolist
+    Loaded plugins: fastestmirror, langpacks
+    Loading mirror speeds from cached hostfile
+     * base: ftp.iitm.ac.in
+     * epel: mirror.rise.ph
+     * extras: ftp.iitm.ac.in
+     * updates: ftp.iitm.ac.in
+    repo id                                                  repo name                                                              status
+    base/7/x86_64                                            CentOS-7 - Base                                                         9,363
+    epel/x86_64                                              Extra Packages for Enterprise Linux 7 - x86_64                         11,919
+    extras/7/x86_64                                          CentOS-7 - Extras                                                         449
+    mysql-connectors-community/x86_64                        MySQL Connectors Community                                                 36
+    mysql-tools-community/x86_64                             MySQL Tools Community                                                      47
+    mysql56-community/x86_64                                 MySQL 5.6 Community Server                                                344
+    updates/7/x86_64                                         CentOS-7 - Updates                                                      2,130
+    repolist: 24,288
+#### run yum update to update the all repo
+      yum update
+      
+#### Install the mysql server
+    yum install mysql-server
+    
+ #### start the msql server
+      systemctl start mysqld
+      
+ #### Allow to start the mysql server at boot time
+      systemctl enable   mysqld
+ #### Check the server started successfully.
+      [root@dev ~]# systemctl status  mysqld
+      
+      â mysqld.service - MySQL Community Server
+         Loaded: loaded (/usr/lib/systemd/system/mysqld.service; enabled; vendor preset: disabled)
+         Active: active (running) since Sat 2017-07-22 12:05:47 IST; 14min ago
+       Main PID: 27634 (mysqld_safe)
+         CGroup: /system.slice/mysqld.service
+                 ââ27634 /bin/sh /usr/bin/mysqld_safe --basedir=/usr
+                 ââ27800 /usr/sbin/mysqld --basedir=/usr --datadir=/var/lib/mysql --plugin-dir=/usr/lib64/mysql/plugin --log-error=/var/l...
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+      Jul 22 12:05:44 dev mysql-systemd-start[27570]: 2017-07-22 12:05:44 27611 [Note] Binlog end
+      Jul 22 12:05:44 dev mysql-systemd-start[27570]: 2017-07-22 12:05:44 27611 [Note] InnoDB: FTS optimize thread exiting.
+      Jul 22 12:05:44 dev mysql-systemd-start[27570]: 2017-07-22 12:05:44 27611 [Note] InnoDB: Starting shutdown...
+      Jul 22 12:05:46 dev mysql-systemd-start[27570]: 2017-07-22 12:05:46 27611 [Note] InnoDB: Shutdown completed; log sequence num...625987
+      Jul 22 12:05:46 dev mysql-systemd-start[27570]: PLEASE REMEMBER TO SET A PASSWORD FOR THE MySQL root USER !
+      Jul 22 12:05:46 dev mysql-systemd-start[27570]: To do so, start the server, then issue the following commands:
+      Jul 22 12:05:46 dev mysql-systemd-start[27570]: /usr/bin/mysqladmin -u root password 'new-password'
+      Jul 22 12:05:46 dev mysqld_safe[27634]: 170722 12:05:46 mysqld_safe Logging to '/var/log/mysqld.log'.
+      Jul 22 12:05:46 dev mysqld_safe[27634]: 170722 12:05:46 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+      Jul 22 12:05:47 dev systemd[1]: Started MySQL Community Server.
+      Hint: Some lines were ellipsized, use -l to show in full.
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ajay-cs/mysql/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+      
+      
